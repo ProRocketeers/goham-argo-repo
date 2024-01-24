@@ -1,0 +1,24 @@
+namespace: default
+service: a_service
+component: api
+environment: dev
+replicaCount: 1
+image:
+  repository: registry.gitlab.com/prorocketeers/rock8cloud-group/rock8cloud
+  tag: a4df19df
+  pullSecrets:
+    - an-secret
+ports:
+  - port: &port 8088
+memory: 400Mi
+envs:
+  HELM_NAMESPACE: an_namespace
+ingress:
+  enabled: true
+  host: app.k8s.prorocketeers.com
+readinessProbe:
+  path: /
+livenessProbe:
+  httpGet:
+    path: /
+    port: *port
