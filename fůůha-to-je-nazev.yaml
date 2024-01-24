@@ -1,0 +1,15 @@
+namespace: default
+service: fůůha-to-je-nazev
+component: api
+environment: dev
+replicacount: 1
+image:
+    repository: padadadad.local/haha.git
+    tag: latest
+    pullSecrets: []
+ports: []
+memory: ""
+ingress: {}
+readinessProbe: {}
+livenessProbe: {}
+kubeSecrets: []
