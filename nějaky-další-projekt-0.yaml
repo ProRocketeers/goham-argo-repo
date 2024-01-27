@@ -1,0 +1,15 @@
+namespace: default
+service: nějaky-další-projekt-0
+component: api
+environment: dev
+replicacount: 1
+image:
+    repository: ""
+    tag: latest
+    pullSecrets: []
+ports: []
+memory: ""
+ingress: {}
+readinessProbe: {}
+livenessProbe: {}
+kubeSecrets: []
